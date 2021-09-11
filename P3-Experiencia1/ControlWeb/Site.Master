@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="ControlWeb.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head runat="server">
+
+    <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
+</head>
+<body>
+    <form runat="server">
+        <strong>
+        <asp:Label ID="lblResult" runat="server" Text="Bienvenido a ASP.NET"></asp:Label>
+        <br />
+        </strong>
+        <asp:Label BorderStyle="dashed" Text="Desarrollo de Aplicaciones" id="Ctrl" runat = "server"/>
+        <asp:CheckBoxList ID="chklst" runat="server" OnSelectedIndexChanged="chklst_SelectedIndexChanged"></asp:CheckBoxList>
+        <asp:Button ID="cmdOK" runat="server" Text="Ok" />
+        
+    </form>
+</body>
+</html>
