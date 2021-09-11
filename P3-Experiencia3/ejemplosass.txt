@@ -1,0 +1,24 @@
+@import "variables"
+@import "partials/styles"
+@import "partials/test-a", "partials/test-b"
+$bg-color: #df0174
+$size: 1em
+body
+background-color: $bg-color
+margin: $size * 2
+$text-color: #000000 !default
+$background-color: $bg-color !default
+@mixin big-blue-text
+font-family: Arial
+font-size: 25px
+font-weight: bold
+color:#0000ff
+@include big-blue-text
+.button-scope
+  margin: 5px
+  border-radius: 2px
+.home-button
+  @extend .button-scope
+  background-color: $black
+.back-button
+  @extend .home-button
